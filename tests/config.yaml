@@ -1,0 +1,12 @@
+inputs: tests/data/inputs.tsv
+output_dir: tests/output
+work_dir: tests/work
+log_dir: tests/logs
+snpeff:
+  genome: testGenome
+  data_dir: tests/data/snpeff
+  download_database: false
+annotsv:
+  genome_build: GRCh38
+  annotations_dir: tests/data/annotsv
+  min_size: 50

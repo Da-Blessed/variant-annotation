@@ -1,0 +1,25 @@
+inputs: config/inputs.tsv
+output_dir: results
+work_dir: work
+log_dir: logs
+
+threads:
+  vcf: 2
+
+resources:
+  validation: 1024
+  vcf: 2048
+  snpeff: 8192
+  annotsv: 8192
+
+# Must match the reference assembly and contig naming used by each input VCF.
+snpeff:
+  genome: GRCh38.mane.1.0.ensembl
+  data_dir: resources/snpeff
+  download_database: true
+
+# Download the AnnotSV annotation bundle separately and point to it here.
+annotsv:
+  genome_build: GRCh38
+  annotations_dir: resources/AnnotSV_annotations
+  min_size: 50

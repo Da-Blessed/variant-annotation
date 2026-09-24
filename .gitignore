@@ -1,0 +1,8 @@
+.snakemake/
+logs/
+results/
+work/
+resources/snpeff/
+resources/AnnotSV_annotations/
+__pycache__/
+*.py[cod]

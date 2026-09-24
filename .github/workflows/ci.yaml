@@ -1,0 +1,30 @@
+name: Variant annotation workflow CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yaml
+          cache-environment: true
+      - name: Test validator
+        shell: micromamba-shell {0}
+        run: python -m unittest discover -s tests -v
+      - name: Lint workflow
+        shell: micromamba-shell {0}
+        run: snakemake --snakefile Snakefile --configfile tests/config.yaml --lint
+      - name: Dry-run all annotations
+        shell: micromamba-shell {0}
+        run: snakemake --snakefile Snakefile --configfile tests/config.yaml --cores 1 --dry-run
+      - name: Dry-run SnpEff only
+        shell: micromamba-shell {0}
+        run: snakemake --snakefile workflow/snpeff.smk --configfile tests/config.yaml --cores 1 --dry-run
+      - name: Dry-run AnnotSV only
+        shell: micromamba-shell {0}
+        run: snakemake --snakefile workflow/annotsv.smk --configfile tests/config.yaml --cores 1 --dry-run

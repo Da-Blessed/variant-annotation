@@ -1,0 +1,4 @@
+name	vcf
+pangenie	/path/to/pangenie.cohort.vcf.gz
+vg_shortread	/path/to/vg.shortread.cohort.vcf.gz
+vg_longread	/path/to/vg.longread.cohort.vcf.gz
