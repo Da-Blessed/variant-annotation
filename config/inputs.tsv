@@ -1,4 +1,2 @@
-name	vcf
-pangenie	/path/to/pangenie.cohort.vcf.gz
-vg_shortread	/path/to/vg.shortread.cohort.vcf.gz
-vg_longread	/path/to/vg.longread.cohort.vcf.gz
+name	gfa	reference_fasta	reference_sample	reference_path	reference_prefix
+hprc	/path/to/pangenome.gfa	/path/to/GRCh38.fa	GRCh38		GRCh38#0#

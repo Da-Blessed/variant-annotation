@@ -1,0 +1,11 @@
+H	VN:Z:1.1
+S	1	AAA
+S	2	C
+S	3	G
+S	4	TTT
+L	1	+	2	+	0M
+L	2	+	4	+	0M
+L	1	+	3	+	0M
+L	3	+	4	+	0M
+W	ref	0	chr1	0	7	>1>2>4
+W	sample	0	chr1	0	7	>1>3>4

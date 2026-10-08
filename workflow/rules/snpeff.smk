@@ -30,8 +30,8 @@ rule snpeff_prepare_database:
 
 rule snpeff_annotate:
     input:
-        vcf=NORMALIZED_VCF,
-        tbi=NORMALIZED_TBI,
+        vcf=PREPROCESSED_VCF,
+        tbi=PREPROCESSED_TBI,
         database=SNPEFF_DATABASE_OK,
     output:
         vcf=SNPEFF_VCF,

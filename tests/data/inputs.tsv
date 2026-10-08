@@ -1,2 +1,2 @@
-name	vcf
-test	tests/data/input.vcf
+name	gfa	reference_fasta	reference_sample	reference_path	reference_prefix
+test	tests/data/graph.gfa	tests/data/reference.fa	ref		ref#0#

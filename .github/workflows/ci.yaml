@@ -1,4 +1,4 @@
-name: Variant annotation workflow CI
+name: GFA deconstruction and annotation CI
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       - name: Lint workflow
         shell: micromamba-shell {0}
         run: snakemake --snakefile Snakefile --configfile tests/config.yaml --lint
-      - name: Dry-run all annotations
+      - name: Dry-run full workflow
         shell: micromamba-shell {0}
         run: snakemake --snakefile Snakefile --configfile tests/config.yaml --cores 1 --dry-run
       - name: Dry-run SnpEff only

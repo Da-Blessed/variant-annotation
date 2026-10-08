@@ -1,7 +1,7 @@
 rule annotsv_annotate:
     input:
-        vcf=NORMALIZED_VCF,
-        tbi=NORMALIZED_TBI,
+        vcf=PREPROCESSED_VCF,
+        tbi=PREPROCESSED_TBI,
     output:
         ANNOTSV_TSV,
     params:

@@ -2,6 +2,21 @@ inputs: tests/data/inputs.tsv
 output_dir: tests/output
 work_dir: tests/work
 log_dir: tests/logs
+threads:
+  graph: 1
+  deconstruct: 1
+  vcf: 1
+resources:
+  validation: 512
+  graph: 1024
+  deconstruct: 1024
+  vcf: 512
+  snpeff: 1024
+  annotsv: 1024
+deconstruct:
+  all_snarls: true
+  contig_only_ref: true
+  keep_conflicted: false
 snpeff:
   genome: testGenome
   data_dir: tests/data/snpeff
